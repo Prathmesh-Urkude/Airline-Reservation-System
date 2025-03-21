@@ -6,12 +6,17 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
+@ToString
+
 public class flightDto {
-    private int id;
+    private Integer id;
     private String airline;
-    private String arrivalTime;
-    private String departureTime;
     private String source;
     private String destination;
+    private String arrivalTime;
+    private String departureTime;
     private double price;
+
 }
