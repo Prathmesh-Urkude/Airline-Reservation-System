@@ -15,8 +15,12 @@ public class ticketRepo {
         return ticket;
     }
 
-    public ticketDto getTicketById(String id) {
-        return tickets.get(id);
+    public Optional<ticketDto> getTicketById(String id) {
+        return Optional.ofNullable(tickets.get(id));
+    }
+
+    public boolean existsById(String id) {
+        return tickets.containsKey(id);
     }
 
     public String deleteTicket(String id) {
